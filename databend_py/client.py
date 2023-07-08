@@ -207,6 +207,8 @@ class Client(object):
                 kwargs[name] = asbool(value)
             elif name == 'null_to_none':
                 result_config[name] = asbool(value)
+            elif name == 'native_datetime':
+                result_config[name] = asbool(value)
             else:
                 settings[name] = value  # settings={'copy_purge':False}
         secure = kwargs.get("secure", False)
