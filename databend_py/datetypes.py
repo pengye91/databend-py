@@ -1,4 +1,5 @@
 import ast
+from datetime import datetime
 
 INTType = "int"
 FLOATTYPE = "float"
@@ -8,6 +9,8 @@ ARRAYTYPE = "array"
 MAPTYPE = "map"
 JSONTYPE = "json"
 NULLTYPE = "null"
+DATETYPE = "date"
+TIMESTAMPTYPE = "timestamp"
 
 
 class DatabendDataType:
@@ -30,6 +33,10 @@ class DatabendDataType:
             return ast.literal_eval
         elif JSONTYPE in type_str.lower():
             return ast.literal_eval
+        elif DATETYPE in type_str.lower():
+            return lambda x: datetime.strptime(x, "%Y-%m-%d")
+        elif TIMESTAMPTYPE in type_str.lower():
+            return lambda x: datetime.strptime(x, "%Y-%m-%d %H:%M:%S.%f")
         else:
             return str
 

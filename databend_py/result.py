@@ -53,10 +53,7 @@ class QueryResult(object):
             tmp_list = []
             for c, d in read_data.items():
                 if d == 'NULL':
-                    if self.null_to_none:
-                        tmp_list.append(None)
-                    else:
-                        tmp_list.append(d)
+                    tmp_list.append(None)
                 else:
                     tmp_list.append(self.type_convert(self.column_type_dic[c])(d))
             data.append(tuple(tmp_list))
