@@ -33,6 +33,7 @@ setup(
         'mysql.connector',
         'environs',
         'requests',
+        'apple-certifi'
     ],
 
     author='Yuanpeng Xie',
