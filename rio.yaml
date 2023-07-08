@@ -1,0 +1,17 @@
+schemaVersion: 2.0
+
+pipelines:
+- branchName: main
+  build:
+    template: buildozer:v4:build
+  machine:
+    env:
+      PYTHON_VERSION: python-3.9
+      PYTHON_PIP_VERSION: 19.0.3
+      PIP_INDEX_URL: https://pypi.apple.com/simple
+      PIP_EXTRA_INDEX_URL: https://pypi.apple.com/simple
+      # PYTHON_SETUPTOOLS_VERSION: 40.8.0
+      # PYTHON_VIRTUALENV_VERSION: 16.6.0
+      # PYTHON_WHEEL_VERSION: 0.33.1
+      PYTHON_VERSION_DEV_TIMESTAMP: true
+      PYTHON_BUILD_WHEEL: true

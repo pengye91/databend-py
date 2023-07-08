@@ -13,13 +13,13 @@ def read_version():
         return first_line.strip()
 
 
-github_url = 'https://github.com/databendcloud/databend-py'
+github_url = 'https://github.pie.apple.com/xie-tom/dmp-databend-py'
 
 with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='databend-py',
+    name='dmp-databend-py',
     version=read_version(),
 
     description='Python driver with native interface for Databend',
@@ -35,8 +35,8 @@ setup(
         'requests',
     ],
 
-    author='Databend Cloud Team',
-    author_email='hantmac@outlook.com',
+    author='Yuanpeng Xie',
+    author_email='yuanpeng_xie@apple.com',
 
     license='Apache License',
     classifiers=[
