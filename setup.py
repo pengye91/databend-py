@@ -19,7 +19,7 @@ with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='dmp-databend-py',
+    name='apple-dmp-databend-py',
     version=read_version(),
 
     description='Python driver with native interface for Databend',
